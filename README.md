@@ -67,18 +67,48 @@ CIRCUIT DIAGRAM
 
 
 **PROGRAM** 
- 
+ int pot;
+int led=7;
+void setup()
+{
+  pinMode(led,OUTPUT);
+  Serial.begin(9600);
+}
 
+void loop()
+{
+  pot=analogRead(A0);
+  //Serial.print("Value=");
+  Serial.println(pot);
+  if(pot>900)
+  {
+  digitalWrite(led, HIGH);
+  delay(500); 
+  digitalWrite(led, LOW);
+  delay(500);
+  }
+    else
+    {digitalWrite(led, LOW);
+     delay(500);
+    }
+  }
 
-
-
-
-
-
-
-
+  FIGURE 1: SERIAL MONITOR AND GRAPH
+<img width="455" alt="Screenshot 2024-02-23 154938" src="https://github.com/Sajith-28/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149937471/9e7f140f-dedb-4f30-b22b-ababafc909d1">
 **
 **Simulation output:** 
+FIGURE 1:SIMULATION 1 ON CONDITION:
+<img width="499" alt="Screenshot 2024-02-23 155233" src="https://github.com/Sajith-28/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149937471/87b88813-ed76-4887-b408-42afb77bba30">
+
+
+FIGURE 2 : SIMILATION 2 OFF CONDITION:
+<img width="500" alt="Screenshot 2024-02-23 155210" src="https://github.com/Sajith-28/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149937471/bc5ed594-4abc-4ee0-9a39-d1afad0e6a79">
+
+FIGURE 3: SCHIMATIC VIEW DIAGRAM:
+<img width="529" alt="Screenshot 2024-02-23 154644" src="https://github.com/Sajith-28/EXPERIMENT-NO--02-INTERFACING-ANALOG-INPUT-SENSOR-POT-WITH-ARDUINO-/assets/149937471/59cd2d20-4cb5-454d-a9ac-211633658989">
+
+
+
 **
 
 
