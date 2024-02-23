@@ -69,8 +69,8 @@ CIRCUIT DIAGRAM
 
 
 
-**PROGRAM** 
-'''int pot;
+''' **PROGRAM** 
+int pot;
 int led=7;
 void setup()
 {
